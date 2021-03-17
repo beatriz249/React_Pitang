@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Todo from './pages/Todo';
 
@@ -18,6 +19,7 @@ const routes = [{
 
 const Routes = () => (
   <BrowserRouter>
+    <Navbar routes={routes} />
     <Switch>
       {routes.map(({ path, component }, index) => (
         // eslint-disable-next-line react/no-array-index-key
